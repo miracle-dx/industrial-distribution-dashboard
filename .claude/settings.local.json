@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(curl -s \"https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json\" -o /Users/duanxuan/代码/my-dashboard/public/china.json)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright:*)",
+      "Bash(node:*)",
+      "Bash(npm uninstall:*)",
+      "WebSearch"
+    ]
+  }
+}
