@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import * as echarts from 'echarts'
 
-// 中国地图GeoJSON数据源
-const CHINA_MAP_URL = 'https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json'
 
 // 各省份详细数据（人口单位：万人，GDP单位：亿元）
 // 数据来源：2024年各省统计局公开数据
@@ -68,10 +66,7 @@ export default function ChinaMap3D() {
         setLoading(true)
         setError(null)
 
-        // 加载中国地图数据
-        const response = await fetch(CHINA_MAP_URL)
-        if (!response.ok) throw new Error('地图数据加载失败')
-        const chinaJson = await response.json()
+        // 使用本地静态地图数据
         echarts.registerMap('china', chinaJson)
 
         chartInstance.current = echarts.init(chartRef.current)
