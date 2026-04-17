@@ -9,8 +9,6 @@ function App() {
         <h1 className="title">全国各省产业现状</h1>
         <div className="subtitle">INDUSTRIAL DISTRIBUTION OF CHINA</div>
       </div>
-
-      {/* 中国地图 */}
       <ChinaMap3D />
     </div>
   )
