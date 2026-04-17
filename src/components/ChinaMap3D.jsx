@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import * as echarts from 'echarts'
-
+import chinaJson from '../../public/china.json'
 
 // 各省份详细数据（人口单位：万人，GDP单位：亿元）
 // 数据来源：2024年各省统计局公开数据
