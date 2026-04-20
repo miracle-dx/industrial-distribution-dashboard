@@ -1,0 +1,252 @@
+/* 地图容器布局 */
+.map-wrapper {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 侧边面板容器 */
+.side-panel {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-self: center;
+}
+
+/* 信息卡片基础样式 */
+.info-card {
+  background: rgba(0, 20, 40, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  animation: borderGlow 3s ease infinite;
+  height: fit-content;
+}
+
+/* 卡片标题 */
+.info-card h3 {
+  color: #00ffff;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 省份名称 */
+.panel-province-name {
+  text-align: center;
+  color: #00ffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* 表格基础样式 */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table td {
+  padding: 10px 6px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  font-size: 13px;
+}
+
+.info-table td:first-child {
+  color: #888;
+}
+
+.info-table td:last-child {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* 颜色类 */
+.text-red {
+  color: #ff0000 !important;
+}
+
+.text-yellow {
+  color: #ffff00 !important;
+}
+
+.text-green {
+  color: #00ffaa !important;
+}
+
+.text-orange {
+  color: #ffaa00 !important;
+}
+
+.text-purple {
+  color: #ff00ff !important;
+}
+
+.text-cyan {
+  color: #00ffff !important;
+}
+
+/* 间距类 */
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+/* 面板区块 */
+.panel-section {
+  margin-bottom: 12px;
+}
+
+.section-label {
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.section-content {
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* 年轻人前景 - 两行截断 */
+.youth-prospect {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.6;
+  max-height: 3.2em;
+}
+
+/* 产业标签样式 */
+.industry-tag {
+  display: inline-block;
+  background: rgba(0, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin: 2px 3px 2px 0;
+  color: #00ffff;
+}
+
+/* 加载容器 */
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(0, 255, 255, 0.2);
+  border-top: 4px solid #00ffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.loading-text {
+  color: #00ffff;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 错误容器 */
+.error-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  background: rgba(0, 10, 30, 0.95);
+  padding: 40px 50px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+.error-title {
+  color: #ff6b6b;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.error-desc {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.reload-button {
+  padding: 12px 35px;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+}
+
+.reload-button:hover {
+  background: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* 空占位卡片 */
+.empty-card {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* 边框发光动画 */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(0, 255, 255, 0.3); }
+  50% { border-color: rgba(0, 255, 255, 0.6); }
+}
+
+/* 图表容器透明度过渡 */
+.chart-container {
+  flex: 1;
+  height: 100%;
+  transition: opacity 0.5s;
+}
+
+.chart-container--hidden {
+  opacity: 0;
+}
